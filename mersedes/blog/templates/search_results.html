@@ -1,0 +1,12 @@
+{% block page_content %}
+  <h2>Результаты поиска:</h2>
+  {% if results %}
+    <ul>
+      {% for entry in results %}
+        <li>{{ entry.title }}</li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>Ничего не найдено.</p>
+  {% endif %}
+{% endblock %}
